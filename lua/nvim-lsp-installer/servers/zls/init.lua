@@ -28,7 +28,7 @@ return function(name, root_dir)
             context.capture(function(ctx)
                 return std.untarxz_remote(ctx.github_release_file)
             end),
-            std.rename(archive_name, "package"),
+            std.rename("bin", "package"),
         },
         default_options = {
             cmd_env = {
