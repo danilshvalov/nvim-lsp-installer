@@ -9,7 +9,7 @@ return function(name, root_dir)
         languages = { "toml" },
         installer = npm.packages({ "@taplo/cli" }),
         default_options = {
-            cmd = { npm.executable(root_dir, "taplo") },
+            cmd = { npm.executable(root_dir, "taplo-lsp") },
         },
     })
 end
