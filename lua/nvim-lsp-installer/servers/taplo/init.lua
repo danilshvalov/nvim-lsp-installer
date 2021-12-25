@@ -9,7 +9,7 @@ return function(name, root_dir)
         languages = { "toml" },
         installer = shell.bash("cargo install taplo-lsp"),
         default_options = {
-            cmd = { shell.executable(root_dir, "taplo-lsp"), "run" },
+            cmd = { shell.bash("taplo-lsp run") },
         },
     })
 end
