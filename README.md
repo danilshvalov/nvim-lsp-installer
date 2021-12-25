@@ -221,6 +221,7 @@ lsp_installer.settings({
 | Tailwind CSS                        | `tailwindcss`             |
 | Terraform                           | `terraformls`             |
 | Terraform [(docs)][tflint]          | `tflint`                  |
+| Toml                                | `taplo`                   |
 | TypeScript [(docs)][tsserver]       | `tsserver`                |
 | Vala                                | `vala_ls`                 |
 | VimL                                | `vimls`                   |

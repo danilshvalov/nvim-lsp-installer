@@ -1,7 +1,7 @@
-local Data = require "nvim-lsp-installer.data"
-local path = require "nvim-lsp-installer.path"
-local fs = require "nvim-lsp-installer.fs"
-local settings = require "nvim-lsp-installer.settings"
+local Data = require("nvim-lsp-installer.data")
+local path = require("nvim-lsp-installer.path")
+local fs = require("nvim-lsp-installer.fs")
+local settings = require("nvim-lsp-installer.settings")
 
 local M = {}
 
@@ -26,11 +26,12 @@ local INSTALL_DIRS = {
     ["tailwindcss"] = "tailwindcss_npm",
     ["terraformls"] = "terraform",
     ["texlab"] = "latex",
+    ["taplo"] = "toml",
     ["vimls"] = "vim",
     ["yamlls"] = "yaml",
 }
 
-local CORE_SERVERS = Data.set_of {
+local CORE_SERVERS = Data.set_of({
     "angularls",
     "ansiblels",
     "arduino_language_server",
@@ -99,6 +100,7 @@ local CORE_SERVERS = Data.set_of {
     "sumneko_lua",
     "svelte",
     "tailwindcss",
+    "taplo",
     "terraformls",
     "texlab",
     "tflint",
@@ -109,7 +111,7 @@ local CORE_SERVERS = Data.set_of {
     "vuels",
     "yamlls",
     "zls",
-}
+})
 
 ---@type table<string, Server>
 local INITIALIZED_SERVERS = {}
@@ -147,7 +149,7 @@ local function get_server_install_dir(server_name)
 end
 
 function M.get_server_install_path(dirname)
-    return path.concat { settings.current.install_root_dir, dirname }
+    return path.concat({ settings.current.install_root_dir, dirname })
 end
 
 ---@param server_name string
